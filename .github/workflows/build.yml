@@ -6,3 +6,4 @@ jobs:
     with:
       board: nrf52840dongle
       shield: mykb
+      
