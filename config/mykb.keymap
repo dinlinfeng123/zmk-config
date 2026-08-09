@@ -1,15 +1,17 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
 / {
     compatible = "zmk,keymap";
     keymap_0: keymap‑0 {
         label = "Base";
         bindings = <
-            &kp KC_UP     // reg0 P0.17 上箭头
-            &kp KC_DOWN   // reg1 P0.20 下箭头
-            &kp KC_LEFT   // reg2 P0.31 左箭头
-            &kp KC_RIGHT  // reg3 P0.29 右箭头
-            &kp LALT      // reg4 P0.24 左Alt
-            &kp KC_H      // reg5 P1.00 H键
+            &kp KC_UP
+            &kp KC_DOWN
+            &kp KC_LEFT
+            &kp KC_RIGHT
+            &kp KC_LALT
+            &kp KC_H
         >;
     };
 };
-
