@@ -4,3 +4,8 @@ compatible: "zmk,shield"
 shield:
   name: mykb
   type: keyboard
+
+keymap:
+  - name: mykb
+    file: "../../../config/mykb.keymap"
+

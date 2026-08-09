@@ -1,0 +1,46 @@
+/ {
+    compatible = "zmk,keymap";
+
+    keymap_0: keymap-0 {
+        label = "Base";
+        bindings = <
+            &kp KC_UP      // reg0 → P0.17 上箭头
+            &kp KC_DOWN    // reg1 → P0.20 下箭头
+            &kp KC_LEFT    // reg2 → P0.31 左箭头
+            &kp KC_RIGHT   // reg3 → P0.29 右箭头
+            &kp LALT       // reg4 → P0.24 左Alt
+            &kp KC_H       // reg5 → P1.00 H键
+        >;
+    };
+
+    mykb_matrix {
+        compatible = "zmk,gpio-keypad";
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        key_0 {
+            reg = <0>;
+            gpios = <&gpio0 17 GPIO_ACTIVE_LOW>;
+        };
+        key_1 {
+            reg = <1>;
+            gpios = <&gpio0 20 GPIO_ACTIVE_LOW>;
+        };
+        key_2 {
+            reg = <2>;
+            gpios = <&gpio0 31 GPIO_ACTIVE_LOW>;
+        };
+        key_3 {
+            reg = <3>;
+            gpios = <&gpio0 29 GPIO_ACTIVE_LOW>;
+        };
+        key_4 {
+            reg = <4>;
+            gpios = <&gpio0 24 GPIO_ACTIVE_LOW>;
+        };
+        key_5 {
+            reg = <5>;
+            gpios = <&gpio1 0 GPIO_ACTIVE_LOW>;
+        };
+    };
+};
