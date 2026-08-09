@@ -4,15 +4,8 @@
 / {
 	compatible = "zmk,keymap";
 
-	base_layer {
+	layer0 {
 		label = "Base";
-		bindings = <
-			&kp KC_UP
-			&kp KC_DOWN
-			&kp KC_LEFT
-			&kp KC_RIGHT
-			&kp KC_LALT
-			&kp KC_H
-		>;
+		bindings = <&kp KC_UP>;
 	};
 };
