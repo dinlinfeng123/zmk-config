@@ -2,16 +2,17 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    compatible = "zmk,keymap";
-    keymap_0: keymap‑0 {
-        label = "Base";
-        bindings = <
-            &kp KC_UP
-            &kp KC_DOWN
-            &kp KC_LEFT
-            &kp KC_RIGHT
-            &kp KC_LALT
-            &kp KC_H
-        >;
-    };
+	compatible = "zmk,keymap";
+
+	base_layer {
+		label = "Base";
+		bindings = <
+			&kp KC_UP
+			&kp KC_DOWN
+			&kp KC_LEFT
+			&kp KC_RIGHT
+			&kp KC_LALT
+			&kp KC_H
+		>;
+	};
 };
