@@ -1,0 +1,7 @@
+file_format: "1"
+id: mykb
+name: mykb
+type: shield
+requires: [nrf52840dongle_nrf52840]
+features:
+  - keys
