@@ -1,0 +1,6 @@
+description: "My simple arrow keyboard"
+compatible: "zmk,shield"
+
+shield:
+  name: mykb
+  type: keyboard
