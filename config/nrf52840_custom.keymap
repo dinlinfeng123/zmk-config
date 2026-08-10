@@ -1,22 +1,24 @@
+#include <boards/arm/nice_nano/nice_nano_nrf52840.dts>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    /* 把你原来dts文件的kbd_matrix完整粘贴到这里 */
+    kbd_matrix {
+        compatible = "zmk,matrix-keymap";
+        row-gpios = <&gpio0 xx GPIO_ACTIVE_HIGH>,
+                    <&gpio0 xx GPIO_ACTIVE_HIGH>;
+        col-gpios = <&gpio0 xx GPIO_ACTIVE_HIGH>,
+                    <&gpio0 xx GPIO_ACTIVE_HIGH>;
+    };
+};
+
 / {
     keymap {
         compatible = "zmk,keymap";
-        direct_keys {
-            compatible = "zmk,matrix‑direct‑keys";
-            gpios =
-                <&gpio0  2  GPIO_ACTIVE_LOW>,
-                <&gpio0  3  GPIO_ACTIVE_LOW>,
-                <&gpio0  4  GPIO_ACTIVE_LOW>,
-                <&gpio0  5  GPIO_ACTIVE_LOW>;
-            labels = "UP","DOWN","LEFT","RIGHT";
-            bindings =
-                <&kp UP>,
-                <&kp DOWN>,
-                <&kp LEFT>,
-                <&kp RIGHT>;
-        };
         default_layer {
-            bindings = <&trans &trans &trans &trans>;
-        }
+            bindings = <
+                /* 保留你原来全部按键编码，不要改动 */
+            >;
+        };
     };
 };
