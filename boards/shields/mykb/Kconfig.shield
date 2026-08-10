@@ -1,2 +1,0 @@
-config SHIELD_MYKB
-	bool "Enable mykb shield"
