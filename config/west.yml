@@ -9,6 +9,6 @@ manifest:
       import: app/west.yml
   self:
     path: config
-  extra-modules:
-    - path: ../
-      board-root: ../boards
+    # 如果要使用extra‑modules，必须放在self下面，不能写在manifest顶层
+    # extra-modules:
+    #   - your‑module‑name
