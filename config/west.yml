@@ -11,5 +11,5 @@ manifest:
 
   self:
     path: .
-    import:
-      - ../boards
+    # 新增这一行！告诉west去仓库根目录找boards文件夹
+    local-board-paths: ["../boards"]
