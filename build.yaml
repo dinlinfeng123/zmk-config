@@ -1,5 +1,5 @@
 ---
 include:
-  - board: nice_nano
+  - board: nrf52840_custom
     keymap: nrf52840_custom
     artifact-name: promicro-nrf52840-firmware
