@@ -1,0 +1,19 @@
+#include <nrf52840_qikf.dtsi>
+
+/ {
+	compatible = "zmk,input-device";
+
+	keymap {
+		compatible = "zmk,matrix-keymap";
+		row-gpios =
+			<&gpio0 17 GPIO_ACTIVE_LOW>,	// P0.17 UP
+			<&gpio0 20 GPIO_ACTIVE_LOW>,	// P0.20 DOWN
+			<&gpio0 22 GPIO_ACTIVE_LOW>,	// P0.22 LEFT
+			<&gpio0 24 GPIO_ACTIVE_LOW>,	// P0.24 RIGHT
+			<&gpio1 0  GPIO_ACTIVE_LOW>,	// P1.00 H
+			<&gpio0 11 GPIO_ACTIVE_LOW>,	// P0.11 CTRL
+			<&gpio1 4  GPIO_ACTIVE_LOW>,	// P1.04 ESC
+			<&gpio1 6  GPIO_ACTIVE_LOW>,	// P1.06 ENTER
+			<&gpio0 9  GPIO_ACTIVE_LOW>;	// P0.09 SPACE
+	};
+};
