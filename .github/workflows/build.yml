@@ -1,4 +1,4 @@
-run: |
-  west build -s zmk/app -d build/${{ matrix.board }} -b ${{ matrix.board }} -- \
-    -DZMK_CONFIG="${{ github.workspace }}/config" \
-    -DBOARD_ROOT=${{ github.workspace }}
+      run: |
+        west build -s zmk/app -d build/${{ matrix.board }} -b ${{ matrix.board }} -- \
+          -DZMK_CONFIG="${{ github.workspace }}/config" \
+          -DBOARD_ROOT=${{ github.workspace }}
