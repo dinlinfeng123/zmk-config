@@ -1,8 +1,4 @@
-name: Build ZMK firmware
-on:
-  push:
-    branches: [ main ]
-
-jobs:
-  build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
+run: |
+  west build -s zmk/app -d build/${{ matrix.board }} -b ${{ matrix.board }} -- \
+    -DZMK_CONFIG="${{ github.workspace }}/config" \
+    -DBOARD_ROOT=${{ github.workspace }}
