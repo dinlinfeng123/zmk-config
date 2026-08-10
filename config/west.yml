@@ -7,9 +7,11 @@ manifest:
     - name: zmk
       remote: zmkfirmware
       revision: main
-      import: app/west.yml
+      import:
+        file: app/west.yml
+        # 关键点：board-root指向仓库根目录的boards文件夹
+        board-root: "../boards"
 
   self:
     path: .
-    # 新增这一行！告诉west去仓库根目录找boards文件夹
-    local-board-paths: ["../boards"]
+    
