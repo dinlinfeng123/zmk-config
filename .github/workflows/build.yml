@@ -1,4 +1,38 @@
-      run: |
-        west build -s zmk/app -d build/${{ matrix.board }} -b ${{ matrix.board }} -- \
-          -DZMK_CONFIG="${{ github.workspace }}/config" \
-          -DBOARD_ROOT=${{ github.workspace }}
+name: Build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        board:
+          - mykb
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: West Init
+        uses: zmkfirmware/zmk-github-actions/init@main
+
+      - name: West Update
+        uses: zmkfirmware/zmk-github-actions/update@main
+
+      - name: Build firmware
+        run: |
+          west build -s zmk/app -d build/${{ matrix.board }} -b ${{ matrix.board }} -- \
+            -DZMK_CONFIG="${{ github.workspace }}/config" \
+            -DBOARD_ROOT=${{ github.workspace }}
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.board }}‑firmware
+          path: build/${{ matrix.board }}/zephyr/*.uf2
