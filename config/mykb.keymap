@@ -1,0 +1,18 @@
+#include <zmk/keys.h>
+#include <zmk/behavior.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+        default_layer {
+            bindings = <
+                &kp UP
+                &kp DOWN
+                &kp LEFT
+                &kp RIGHT
+                &kp VOLU
+                &kp VOLD
+            >;
+        };
+    };
+};
