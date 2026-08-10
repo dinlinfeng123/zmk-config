@@ -1,0 +1,21 @@
+#include <zmk/keys.h>
+#include <zmk/hid.h>
+
+/ {
+	keymap {
+		compatible = "zmk,keymap";
+		default_layer {
+			bindings = <
+				&kp UP_ARROW,
+				&kp DOWN_ARROW,
+				&kp LEFT_ARROW,
+				&kp RIGHT_ARROW,
+				&kp H,
+				&kp LCTRL,
+				&kp ESC,
+				&kp ENTER,
+				&kp SPACE
+			>;
+		};
+	};
+};
