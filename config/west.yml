@@ -9,3 +9,6 @@ manifest:
       import: app/west.yml
   self:
     path: config
+  extra-modules:
+    - path: ../
+      board-root: ../boards
