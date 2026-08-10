@@ -2,3 +2,12 @@
 name = mykb
 vendor = custom
 arch = arm
+module = zmk-config
+
+[board.zephyr]
+toolchain = zephyr
+ram = 256
+flash = 1024
+
+[board.supported]
+ble = true
