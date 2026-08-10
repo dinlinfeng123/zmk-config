@@ -1,5 +1,5 @@
 ---
 include:
-  - board: nice_nano_v2
-    cmake-args: -DKEYMAP_FILE=${ZMK_CONFIG}/config/nrf52840_custom.keymap
+  - board: nice_nano
+    cmake-args: -DKEYMAP_FILE=${ZMK_CONFIG}/nrf52840_custom.keymap
     artifact-name: promicro-nrf52840-firmware
