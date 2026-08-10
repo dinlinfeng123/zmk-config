@@ -1,1 +1,46 @@
 
+#include <zephyr/dt-bindings/gpio/gpio.h>
+
+/ {
+    keys {
+        compatible = "zmk,gpio-keys";
+        label = "GPIO Keys";
+
+        key_up: key_up {
+            gpios = <&gpio0 17 GPIO_ACTIVE_LOW>;
+            code = <KEY_UP>;
+        };
+        key_down: key_down {
+            gpios = <&gpio0 20 GPIO_ACTIVE_LOW>;
+            code = <KEY_DOWN>;
+        };
+        key_left: key_left {
+            gpios = <&gpio0 22 GPIO_ACTIVE_LOW>;
+            code = <KEY_LEFT>;
+        };
+        key_right: key_right {
+            gpios = <&gpio0 24 GPIO_ACTIVE_LOW>;
+            code = <KEY_RIGHT>;
+        };
+        key_h: key_h {
+            gpios = <&gpio1 0 GPIO_ACTIVE_LOW>;
+            code = <KEY_H>;
+        };
+        key_ctrl: key_ctrl {
+            gpios = <&gpio0 11 GPIO_ACTIVE_LOW>;
+            code = <LCONTROL>;
+        };
+        key_esc: key_esc {
+            gpios = <&gpio1 4 GPIO_ACTIVE_LOW>;
+            code = <KEY_ESC>;
+        };
+        key_enter: key_enter {
+            gpios = <&gpio1 6 GPIO_ACTIVE_LOW>;
+            code = <KEY_ENTER>;
+        };
+        key_space: key_space {
+            gpios = <&gpio0 9 GPIO_ACTIVE_LOW>;
+            code = <KEY_SPACE>;
+        };
+    };
+};
