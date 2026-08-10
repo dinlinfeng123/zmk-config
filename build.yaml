@@ -1,5 +1,3 @@
 ---
 include:
-  - board: nrf52840dongle_nrf52840
-    shield: mykb
-    keymap: config/mykb.keymap
+  - board: mykb
