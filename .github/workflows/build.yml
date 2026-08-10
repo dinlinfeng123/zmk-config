@@ -8,26 +8,11 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
     strategy:
       fail-fast: false
       matrix:
         board:
           - mykb
-
-    steps:
-      - name: Checkout user config
-        uses: actions/checkout@v4
-
-      - name: Build ZMK firmware
-        uses: urob/zmk-actions/build-user-config@v2
-        with:
-          config_path: .
-          board: ${{ matrix.board }}
-          cmake_args: -DBOARD_ROOT=${{ github.workspace }}
-
-      - name: Upload firmware artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ matrix.board }}-firmware
-          path: ./build/artifacts/*.uf2
+    with:
+      board: ${{ matrix.board }}
