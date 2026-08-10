@@ -1,4 +1,3 @@
 ---
 include:
-  - board: myboard
-  
+  - board: nrf52840_custom
