@@ -1,21 +1,22 @@
-#include <zmk/keys.h>
-#include <zmk/hid.h>
-
 / {
-	keymap {
-		compatible = "zmk,keymap";
-		default_layer {
-			bindings = <
-				&kp UP_ARROW,
-				&kp DOWN_ARROW,
-				&kp LEFT_ARROW,
-				&kp RIGHT_ARROW,
-				&kp H,
-				&kp LCTRL,
-				&kp ESC,
-				&kp ENTER,
-				&kp SPACE
-			>;
-		};
-	};
+    keymap {
+        compatible = "zmk,keymap";
+        direct_keys {
+            compatible = "zmk,matrix‑direct‑keys";
+            gpios =
+                <&gpio0  2  GPIO_ACTIVE_LOW>,
+                <&gpio0  3  GPIO_ACTIVE_LOW>,
+                <&gpio0  4  GPIO_ACTIVE_LOW>,
+                <&gpio0  5  GPIO_ACTIVE_LOW>;
+            labels = "UP","DOWN","LEFT","RIGHT";
+            bindings =
+                <&kp UP>,
+                <&kp DOWN>,
+                <&kp LEFT>,
+                <&kp RIGHT>;
+        };
+        default_layer {
+            bindings = <&trans &trans &trans &trans>;
+        }
+    };
 };
