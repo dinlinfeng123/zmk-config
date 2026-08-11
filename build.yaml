@@ -1,5 +1,0 @@
----
-include:
-  - board: nice_nano/nrf52840
-    keymap: nrf52840_custom
-    artifact-name: nice-nano-custom-fw
