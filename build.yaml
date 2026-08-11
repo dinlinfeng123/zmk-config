@@ -1,5 +1,6 @@
 include:
+  # 先用官方样板键盘 corne 测试编译通道通不通
   - board: nice_nano_v2
-    shield: kb_left
+    shield: corne_left
   - board: nice_nano_v2
-    shield: kb_right
+    shield: corne_right
